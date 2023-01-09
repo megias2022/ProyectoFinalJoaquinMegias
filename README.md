@@ -45,3 +45,4 @@ c:\> py manage.py runserver
 Ir a localhost:8000/ 
 para tener acceso a la aplicación.
 Si todo va bien, debería poder abrir el navegador y ver cómo se ejecuta la aplicación.
+
