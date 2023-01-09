@@ -12,9 +12,11 @@
 </ul>
 {% endif %}
 {% block contenido %}
+<h2>Actualizar información de usuario</h2>
 <form enctype="multipart/form-data" method = "POST">
     {% csrf_token %}
     {{form.as_p}}
+    {{ avatar_form.as_p }}
     <input type ="submit" value="Actualizar">
 </form>
 {% endblock %}
