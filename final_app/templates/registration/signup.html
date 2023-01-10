@@ -1,8 +1,9 @@
 {% extends 'final_app/base.html' %}
 
 {% block contenido %}
-    <h2>Registrar Usuario</h2>
-    <form method="POST">
+    <div style="padding: 0 40px">
+    <h4>Registrar Usuario</h4>
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Registrarme">

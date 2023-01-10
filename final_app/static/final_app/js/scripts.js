@@ -12,7 +12,7 @@
   // Definimos la función para cambiar el color de fondo
   function cambiarColor() {
     element.style.backgroundColor = "red";
-  }
+}
 
   // Asignamos la función como manejador de eventos para el clic
   element.addEventListener("click", cambiarColor);

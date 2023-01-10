@@ -3,9 +3,9 @@
 {% block contenido %}
 <form style="text-align: center;" method="post">
     {% csrf_token %}
-    <p>¿Seguro que desea borrar el post? </p>
+    <p>¿Seguro que desea borrar el mensaje? </p>
     <p>
-    <a class="btn btn-primary" href="{% url 'final_app_listar' %}" type="button" >No</a>
+    <a class="btn btn-primary" href="{% url 'final_app_mensajes_listar' %}" type="button" >No</a>
     <input class="btn btn-primary" type="submit" value="Si">
     </p>
 </form>

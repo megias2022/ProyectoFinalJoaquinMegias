@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import  ListView, CreateView, DetailView, UpdateView, DeleteView
+from django.views.generic import  ListView, CreateView, DetailView, UpdateView, DeleteView, TemplateView
 from final_app.models import Post
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
@@ -13,12 +13,15 @@ def index(request):
     posts = Post.objects.order_by('-publicado_el').all()
     return render(request, "final_app/index.html", {"posts": posts})
 
-class PostList(LoginRequiredMixin, ListView):
-    model = Post 
-    template_name = 'final_app/post_list.html'   
+class AboutView(TemplateView):
+    template_name = 'final_app/about.html'
 
 class PostDetalle(DetailView):
     model = Post 
+
+class PostList(LoginRequiredMixin, ListView):
+    model = Post 
+    template_name = 'final_app/post_list.html'   
 
 class PostCrear(LoginRequiredMixin, CreateView):
     model = Post
@@ -74,6 +77,3 @@ class MensajeCrear(CreateView):
 class MensajeBorrar(LoginRequiredMixin, DeleteView):
     model = Mensaje
     success_url = reverse_lazy("final_app_mensajes_listar")
-
-def About(request):
-    return render(request, "final_app/about.html")
