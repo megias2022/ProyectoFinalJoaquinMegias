@@ -1,48 +1,39 @@
-Sistema para gestionar contenido simple
+Proyecto Final - Joaquín Megías - Blog de Playas
 
-Este proyecto tiene como objetivo crear un sistema para la administración de contenido. 
-Cosas que puedes hacer:
-* Crear, buscar, leer, actualizar y eliminar registros.
-* Establecer artículos como titulares.
-* Añadir una imagen para cada artículo.
+Sistema para gestionar contenido simple, en éste caso, imágenes de distintas playas del mundo que se pueden ver, actualizar o eliminar mediante un registro/ingreso de usuario... 
+
+Se realizó un CRUD. 
+CRUD es una metodología que te ayuda a crear una base de datos, para luego, darle lectura, actualizar o eliminar información en una base de datos ya existente, es una práctica común en el desarrollo web para manejar datos en aplicaciones.
+
+:::: Requisitos ::::
+
+* Tener instalado Python en tu sistema. Puedes descargar la última versión desde el sitio oficial: https://www.python.org/downloads/
+* Tener instalado pip, que es el gestor de paquetes de Python. Si ya tienes Python instalado, deberías tenerlo disponible en tu terminal.
+* Tener instalado Django. Para instalarlo, abre la terminal y escribe:
+
+pip install django
+
+Instalación
+1. Descarga o clona el repositorio de tu aplicación Django en tu equipo.
+2. Abre Visual Studio Code y selecciona "File > Open Folder" y elige la carpeta donde has guardado el repositorio.
+3. Abre la terminal de Visual Studio Code (Ctrl + ñ).
+4. Instala las dependencias necesarias para tu aplicación escribiendo en la terminal:
+pip install -r requirements.txt
+
+5. Crea la base de datos ejecutando las migraciones de Django:
+
+python manage.py makemigrations
+python manage.py migrate
 
 
-Instalar en iOS
-Para instalar este software necesitas hacer:
+Ejecución
+1. Inicia el servidor de desarrollo de Django escribiendo en la terminal:
 
-*Comprobar la versión de Python
-Este proyecto se escribió con python 3.11.0, por lo que le sugiero que pruebe con esta versión o superior para no tener problemas de compatibilidad.
+python manage.py runserver
 
-Cómo verifico mi versión de python,
-en sistemas *nix:
-> python --versión
-> Python 3.11.0
-en Windows:
-c:\> py --versión
-c:\> Python 3.11.0
+2. Abre tu navegador y escribe en la barra de direcciones:
 
-Instalar dependencias
-Para instalar las dependencias, debe ejecutar pip install, asegúrese de estar en la carpeta del proyecto y puede ver el archivo requirements.txt cuando hace un ls o dir:
-> pip install -r requisitos.txt
+http://127.0.0.1:8000/
 
-Este último devolverá un montón de cosas en la terminal.
-Algunos sistemas operativos como iOS requerirán que uses pip3 en lugar de pip
-
-Configuración de la aplicación Django
-Una vez que termine la instalación de las dependencias, debe ejecutar algunos comandos Django.
-
-Migraciones
-Inicializar la base de datos * nix:
-> python manage.py migrate
-Windows:
-c:\> py administrar.py migrate
-
-Ejecutar el servidor de prueba
-> python manage.py runserver
-Windows:
-c:\> py manage.py runserver
-
-Ir a localhost:8000/ 
-para tener acceso a la aplicación.
-Si todo va bien, debería poder abrir el navegador y ver cómo se ejecuta la aplicación.
+3. Ya puedes utilizar tu aplicación Django en el navegador.
 

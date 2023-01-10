@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'final_app'
+    'final_app',
 ]
 
 MIDDLEWARE = [
@@ -128,5 +128,3 @@ LOGIN_URL = 'final_app_login'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = "media/"
-
-DATE_INPUT_FORMATS = ['%d-%m-%Y']

@@ -5,10 +5,10 @@
     <div style="padding: 0 40px">
     <h4>Ingreso</h4>    
     
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Ingresar">
-    </form>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Ingresar">
+        </form>
 {% endblock %}
 

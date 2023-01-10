@@ -17,7 +17,7 @@ class AboutView(TemplateView):
     template_name = 'final_app/about.html'
 
 class PostDetalle(DetailView):
-    model = Post 
+    model = Post
 
 class PostList(LoginRequiredMixin, ListView):
     model = Post 
